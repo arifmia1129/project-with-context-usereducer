@@ -7,7 +7,7 @@ export const ProductContext = createContext();
 const ProductProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
-
+    console.log(state)
     useEffect(() => {
         dispatch({ type: actionTypes.FETCH_START })
         fetch("https://raw.githubusercontent.com/mir-hussain/moon-tech-usereducer-contextapi/main/products.json")
